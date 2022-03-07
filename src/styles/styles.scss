@@ -1,0 +1,25 @@
+@import "./baseSetup/variables";
+@import "./baseSetup/setup";
+
+
+.wrapper {
+  max-width: 1920px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+
+@import "./headerStyles";
+@import "./bookRowStyles";
+
+
+.message {
+  margin: 25px;
+  text-align: center;
+}
