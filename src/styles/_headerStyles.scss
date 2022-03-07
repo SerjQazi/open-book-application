@@ -5,13 +5,18 @@
   border-radius: 10px;
   box-shadow: 0 2px 7px 0 $primaryShadow;
 
+  .titleContainer.notLoaded {
+    padding-top: 25vh;
+  }
+  
   .titleContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 25vh;
+    padding-top: 1.5vh;
+    transition: all .5s ease-in-out;
 
     h1 {
       margin: 0;
