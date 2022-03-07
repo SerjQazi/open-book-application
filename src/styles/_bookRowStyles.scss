@@ -1,0 +1,108 @@
+.bookList {
+  width: 98%;
+  margin: 15px auto;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  @include media(1550px) {
+    max-height: 68vh;
+  }
+
+  table {
+    width: 100%;
+    tr {
+      display: grid;
+      grid-template-columns: 0.8fr 2.5fr 0.2fr 1.95fr;
+    }
+    thead {
+      th {
+        display: flex;
+        align-items: center;
+        .icon {
+          color: $secondaryColor;
+          margin-left: 5px;
+          
+        }
+      }
+      tr {
+        grid-template-columns: 0.8fr 2.35fr 0.2fr 1.95fr;
+        @include media(1550px) {
+          grid-template-columns: 0.7fr 2.35fr 0.2fr 1.95fr;
+        }
+      }
+    }
+    tbody {
+      .author {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        p {
+          margin-left: 50px;
+        }
+      }
+      tr {
+        border: 1px solid $secondaryTextColor;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+      }
+      td {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        p {
+          margin: 10px;
+        }
+      }
+      .linkButton {
+        padding: 0;
+        .buttonContainer {
+          border: 2px solid $primaryColor;
+          border-radius: 0 15px 0 15px;
+          text-align: center;
+          padding: 8px 15px;
+          cursor: pointer;
+          &:hover,
+          &:focus {
+            background-color: $primaryColor;
+            a {
+              color: white;
+            }
+          }
+          a {
+            font-size: 1.8rem;
+            color: $secondaryColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    td {
+      display: flex;
+      .bookData {
+        display: flex;
+      }
+    }
+    img {
+      width: 90%;
+      height: auto;
+      margin: 5px auto;
+      box-shadow: 2px 2px 7px 2px $primaryShadow;
+    }
+
+    .noImage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      height: 200px;
+      box-shadow: 2px 2px 7px 2px $primaryShadow;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
