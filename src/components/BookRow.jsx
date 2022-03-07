@@ -1,16 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
-
-import { api } from "../api/Configurations";
+import { useState } from "react";
 
 import { BsArrowDownSquare, BsArrowUpSquare } from "react-icons/bs";
 
-const BookRow = ({ result, setResult, loadBookTitle }) => {
-  const getBookCover = (coverID, size) => {
-    const bookCoverBaseUrl = "http://covers.openlibrary.org/b/id/";
-    if (size) {
-      return bookCoverBaseUrl + `${coverID}-${size.toUpperCase()}.jpg`;
-    } else return bookCoverBaseUrl + `${coverID}.jpg`;
+const BookRow = ({ result, setResult }) => {
+  const getBookCover = (coverID) => {
+      return `http://covers.openlibrary.org/b/id/${coverID}-M.jpg`;
   };
 
   const openLibraryUrl = "https://openlibrary.org";
@@ -73,7 +68,7 @@ const BookRow = ({ result, setResult, loadBookTitle }) => {
             <tr key={data.key}>
               <td>
                 {data.cover_i ? (
-                  <img src={getBookCover(data.cover_i, "m")} alt="" />
+                  <img src={getBookCover(data.cover_i)} alt="" />
                 ) : (
                   <div className="noImage">
                     <p>no image available</p>

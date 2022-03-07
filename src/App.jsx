@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./styles/styles.scss";
 
 import { api } from "./api/Configurations";
@@ -18,7 +18,6 @@ function App() {
   async function loadBookTitle() {
     try {
       const response = await api.getBookTitle(bookTitle);
-      console.log(response);
       setResult(response.data.docs);
       setLoading(false);
       setHasFailed(false);
@@ -84,7 +83,6 @@ function App() {
               <BookRow
                 result={result}
                 setResult={setResult}
-                loadBookTitle={loadBookTitle}
               />
             </div>
           ) : (
