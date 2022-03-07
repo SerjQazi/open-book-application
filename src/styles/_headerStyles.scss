@@ -1,0 +1,70 @@
+.mainContainer {
+  height: calc(100vh - 45px);
+  background-color: $creamPaper;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px 0 $primaryShadow;
+
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 25vh;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-family: $eczra;
+      font-size: 4.5rem;
+      letter-spacing: 4.5px;
+      color: $darkPrimaryColor;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: $primaryTextColor;
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        font-family: $ubuntu;
+        padding: 5px 10px;
+        margin-right: 20px;
+        width: 70%;
+        color: $primaryTextColor;
+        border-radius: 0 10px 0 10px;
+        border: 2px solid $darkPrimaryColor;
+        &:focus {
+          border: 2px solid $darkPrimaryColor;
+        }
+      }
+
+      button {
+        font-family: $ubuntu;
+        width: 30%;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: $darkPrimaryColor;
+        border: 2px solid $darkPrimaryColor;
+        box-shadow: 0 2px 5px 0 $secondaryColor;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          border: 2px solid $darkPrimaryColor;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

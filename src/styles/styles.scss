@@ -1,0 +1,12 @@
+@import "./baseSetup/variables";
+@import "./baseSetup/setup";
+
+
+.wrapper {
+  max-width: 1920px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+@import "./headerStyles";
