@@ -4,6 +4,7 @@
     1. I would have also liked to focus more on the UX design and try to make it more intuitive.
 
 2. I find ternary operators to be my absolute favorite and most useful feature when using React. It allows me to keep my code clean and readable and works really well with my thought process. An example where I have used this is:
+
 `{loading ? (
     <div className="message">
         <p>Your results are being loaded...</p>
