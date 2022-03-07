@@ -92,7 +92,7 @@ const BookRow = ({ result, setResult }) => {
               </td>
               <td className="linkButton">
                 <div className="buttonContainer">
-                  <a href={openLibraryUrl + data.key} target="_blank">
+                  <a href={openLibraryUrl + data.key} target="_blank" rel="noreferrer">
                     View on Open Library
                   </a>
                 </div>
